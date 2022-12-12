@@ -17,7 +17,7 @@
         </li>
        
         
-        <li class="nav-item pl-3 ">
+        <li *ngIf='auth.adm()'  class="nav-item pl-3 ">
 
             <a [routerLink]="['/user-edit',id]">
 
