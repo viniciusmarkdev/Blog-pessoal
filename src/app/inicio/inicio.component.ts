@@ -24,6 +24,7 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema()
   user:User = new User()
   idUser = environment.id
+  nomeTema : string
   key = 'data'
   reverse = true
  
@@ -127,6 +128,17 @@ export class InicioComponent implements OnInit {
       
     }
   
+    findByNomeTema(){
+
+      if(this.nomeTema ==''){
+        this.getAllTemas()
+      }else{
+        this.temaService.getByDescricaoTema(this.nomeTema).subscribe((resp:Tema[])=>{
+          this.listaTemas = resp
+        })
+      }
+
+    }
 
     
   }
