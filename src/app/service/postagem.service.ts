@@ -28,12 +28,12 @@ export class PostagemService {
 
   postPostagem(postagem : Postagem) : Observable<Postagem>{
 
-    return this.http.post<Postagem>('http://localhost:8080/postagens', postagem,this.token)
+    return this.http.post<Postagem>('http://localhost:8080/postagens',postagem,this.token)
   }
 
 
   getByTituloPostagem(titulo: string):Observable<Postagem[]>{
-    return this.http.get<Postagem[]>(`http://localhost:8080/postagens/${titulo}` ,this.token)
+    return this.http.get<Postagem[]>(`http://localhost:8080/postagens/titulo/${titulo}` ,this.token)
   }
 
    putPostagem(postagem: Postagem): Observable<Postagem>{

@@ -26,6 +26,7 @@ export class InicioComponent implements OnInit {
   idUser = environment.id
   key = 'data'
   reverse = true
+ 
   
 
 

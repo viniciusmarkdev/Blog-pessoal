@@ -25,6 +25,7 @@ import { OrderModule } from 'ngx-order-pipe';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { OrderModule } from 'ngx-order-pipe';
     FormsModule,
     ModalModule.forRoot(),
     OrderModule
+   
 
   ],
   providers: [{
